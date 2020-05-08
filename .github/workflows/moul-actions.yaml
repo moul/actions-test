@@ -1,0 +1,34 @@
+name: moul/actions
+on: pull_request
+
+jobs:
+  just_lgtm:
+    name: just LGTM
+    runs-on: ubuntu-latest
+    steps:
+    - name: lgtm
+      uses: moul/actions@v1.1.1
+      with:
+        run: lgtm
+        comment: false
+        
+  lgtm_with_comment:
+    name: LGTM with comment
+    runs-on: ubuntu-latest
+    steps:
+    - name: lgtm
+      uses: moul/actions@v1.1.1
+      with:
+        run: lgtm
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+  #fail:
+  #  name: FAIL!
+  #  runs-on: ubuntu-latest
+  #  continue-on-error: true
+  #  steps:
+  #  - name: fail
+  #    uses: moul/actions@v1.1.1
+  #    with:
+  #      run: fail
+  #      comment: false
