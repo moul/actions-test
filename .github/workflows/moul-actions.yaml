@@ -22,13 +22,13 @@ jobs:
         run: lgtm
         token: ${{ secrets.GITHUB_TOKEN }}
 
-  fail:
-    name: FAIL!
-    runs-on: ubuntu-latest
-    continue-on-error: true
-    steps:
-    - name: fail
-      uses: moul/actions@v1.1.1
-      with:
-        run: fail
-        comment: false
+  #fail:
+  #  name: FAIL!
+  #  runs-on: ubuntu-latest
+  #  continue-on-error: true
+  #  steps:
+  #  - name: fail
+  #    uses: moul/actions@v1.1.1
+  #    with:
+  #      run: fail
+  #      comment: false
